@@ -4,6 +4,7 @@ const resetButton = document.querySelector('#resetButton');
 const P1Score = document.querySelector('#P1Score');
 const P2Score = document.querySelector('#P2Score');
 const select = document.querySelector('#select');
+const winnermsg = document.querySelector('#winnermsg');
 let P1Points = 0;
 let P2Points = 0;
 let winningScore = 3;
@@ -17,6 +18,7 @@ button1.addEventListener('click', (e) => {
             isGameOver = true;
             P1Score.classList.add("winner");
             P2Score.classList.add("loser"); 
+            winnermsg.innerText = "Player 1 wins!";
         }
         P1Score.innerText = P1Points;
         
@@ -31,6 +33,7 @@ button2.addEventListener('click', (e) => {
             isGameOver = true;
             P2Score.classList.add("winner");
             P1Score.classList.add("loser");
+            winnermsg.innerText = "Player 2 wins!";
         } 
         P2Score.innerText = P2Points;
         
@@ -53,4 +56,5 @@ function reset (){
     P2Points = 0;
     P1Score.classList.remove("winner", "loser");
     P2Score.classList.remove("winner", "loser");
+    winnermsg.innerText = "";
 }
