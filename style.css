@@ -6,9 +6,13 @@ body{
     width: 600px;
     height: 700px;
     text-align: center;
-    margin: auto;
     border: 2px solid rgb(235, 86, 33);
     border-radius: 2%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
 }
 #main-container img{
     width: 550px;
@@ -20,4 +24,14 @@ body{
 }
 .loser{
     color: red;
+}
+
+#button1{
+    background-color: greenyellow;
+}
+#button2{
+    background-color: blue;
+}
+#resetButton{
+    background-color: red;
 }
