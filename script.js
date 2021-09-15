@@ -19,11 +19,11 @@ button1.addEventListener('click', (e) => {
             P1Score.classList.add("winner");
             P2Score.classList.add("loser"); 
             winnermsg.innerText = "Player 1 wins!";
+            button1.disabled = true;
+            button2.disabled = true;
         }
-        P1Score.innerText = P1Points;
-        
+        P1Score.innerText = P1Points;   
     }
-
 })
 
 button2.addEventListener('click', (e) => {
@@ -34,11 +34,11 @@ button2.addEventListener('click', (e) => {
             P2Score.classList.add("winner");
             P1Score.classList.add("loser");
             winnermsg.innerText = "Player 2 wins!";
+            button1.disabled = true;
+            button2.disabled = true;
         } 
-        P2Score.innerText = P2Points;
-        
+        P2Score.innerText = P2Points; 
     }
-
 })
 
 select.addEventListener('change', () =>{
@@ -57,4 +57,6 @@ function reset (){
     P1Score.classList.remove("winner", "loser");
     P2Score.classList.remove("winner", "loser");
     winnermsg.innerText = "";
+    button1.disabled = false;
+    button2.disabled = false;
 }
